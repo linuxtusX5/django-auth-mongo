@@ -69,5 +69,5 @@ STATIC_URL = "static/"
 
 # --- MongoDB connection ---
 # Use your local MongoDB or Atlas connection string:
-MONGO_URI = config("MONGO_URI")
-connect(host=MONGO_URI)
+MONGO_URL = config("MONGO_URI")
+connect(host=MONGO_URL)

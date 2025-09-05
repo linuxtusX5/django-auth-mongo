@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Profile</h1>
+    <p>
+      Hello, {{ request.user.get_short_name|default:request.user.username }}!
+    </p>
+    <p><a href="{% url 'logout' %}">Logout</a></p>
+    {% for message in messages %}
+    <p>{{ message }}</p>
+    {% endfor %}
+  </body>
+</html>
